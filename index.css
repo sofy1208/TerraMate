@@ -18,21 +18,20 @@
 
 .navbar {
     height: 100px;
+    width: 100%;
     background-color: var(--primary);
-    padding: 10px, 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.links, .hamb-men, #toggle{
-    display: none;
-}
-
-.logo{
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    
+}
+
+.links, .hamb-men, #toggle, .chck, .menu i{
+    display: none;
 }
 
 .logo img {
@@ -40,27 +39,28 @@
     min-width: 80px;
     max-width: 1300px;
     height: 95px;
+    margin-left: 30px;
 }
 
 .logo img:hover{
     cursor: pointer;
-    transform: scale(1.8,1.8);
+    transform: scale(1.3);
     transition: 0.5s;
+    border-radius: 90%;
 }
+
+
 
 .menu ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
     list-style: none;
-
+    margin-left: 300px;
+    gap: 30px;
 }
 
 .menu ul li {
     margin: 0px 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .menu ul li a {
@@ -77,33 +77,82 @@ font-family: var(--font-title);
     transition: 0.5s;
 }
 
+.cart img {
+    width: 30px;
+    margin-left: 300px;
+    cursor: pointer;
+}
+
+.cart img:hover {
+    transform: scale(1.5,1.5);
+    transition: 0.5s;
+}
+
+.cart-disp {
+position: absolute;
+right: 0;  
+top: 75px;
+background-color: var(--primary);
+font-size: small;
+padding: 50px 30px;
+height: calc(100vh);
+margin-left: 0;
+}
+
+.cart-disp p, span{
+    font-family: var(--font-text);
+    font-size: 15px;
+    color: var(--sec);
+    display: inline;
+    margin-inline: 20px;
+   margin-left: 0;
+}
+
+.btn_cart{
+    height: 30px;
+    width: 120px;
+    background-color: var(--but);
+    border-radius: 10px;
+    font-family: var(--font-title);
+    color: var(--sec);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#togg:checked ~ .cart-disp {
+    display: none;
+}
+
 /*Estilo Home*/
 
 
 #home div{
     height: 450px;
+    margin-top: 60px;
     background-image: url(/imagenes/Banners/Banner.png);
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: end;
+     align-items: end;
     }
 
     .btn_banner{
-        position: relative;
-       height: 50px;
-       width: 140px;
-       background-color: var(--but);
-        color: var(--sec);
-        font-family: var(--font-title);
-        font-size: large;
-        border-radius: 30px;
-        margin-top: 350px;
-        margin-left: 350px;
+    position: relative;
+    margin-bottom: 10vh; 
+    right: 160vh;
+    height: 10%; 
+    width: 130%; 
+    background-color: var(--but);
+    color: var(--sec);
+    font-family: var(--font-title);
+    font-size: 1.5vw; 
+    border-radius: 30px;
     
     }
 
     .btn_banner a{
+        display: block; 
         text-align: center;
         text-decoration: none;
         color: var(--sec);
@@ -112,7 +161,7 @@ font-family: var(--font-title);
     .btn_banner:hover{
         background-color: #AF1010;
         cursor: pointer;
-    transform: scale(1.5,1.5);
+    transform: scale(1.3,1.3);
     transition: 0.5s;
     }
 
@@ -178,6 +227,7 @@ color:var(--primary)
 #productos * {
 position: relative;
 z-index: 1;
+cursor: pointer;
 }
 
 #productos h1{
@@ -310,6 +360,7 @@ font-size: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 #contacto h1{
@@ -343,6 +394,7 @@ font-size: 20px;
     margin-bottom: 15px;
     font-family: var(--font-text);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .formu label{
@@ -351,6 +403,7 @@ font-size: 20px;
 
 .formu input, .formu textarea{
     color: var(--primary);
+    cursor: pointer;
 }
 
 h2 {
@@ -380,6 +433,7 @@ h2 {
     width: 100px;
     font-family: var(--font-title);
     color: var(--primary);
+    cursor: pointer;
 }
 
 /*Estilo Footer*/ 
@@ -403,6 +457,7 @@ h2 {
 .suscribe input, .suscribe button{
     margin-top: 10%;
     border-radius:5px;
+    cursor: pointer;
 }
 
 .suscribe button {
@@ -431,7 +486,7 @@ h2 {
 /*RESPONSIVE*/
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1246px) {
 
     .navbar {
         height: auto;
@@ -439,7 +494,14 @@ h2 {
         align-items: center;
     }
 
-    .menu {
+    .logo {
+      overflow: hidden;
+    }
+      .cart-disp, .cart{
+        display: none;
+      }
+
+    .menu{
         display: none;
         background-color: var(--primary);
         width: 100%;
@@ -447,7 +509,7 @@ h2 {
         padding-top: 20px;
     }
 
-    .menu ul {
+    .menu ul, .menu i{
         display: block;
     }
 
@@ -457,10 +519,15 @@ h2 {
         top: 20px;
         right: 20px;
         cursor: pointer;
+        margin-right: 20px;
     }
 
     .hamb-men img {
         width: 40px;
+    }
+
+    .cart img{
+       display: inline-block;
     }
 
     .check {
@@ -482,11 +549,12 @@ h2 {
 
     .logo {
         height: 80px;
-       margin-right: 500px;
+       margin-right: 1000px;
      }
  
      #home div{
-         height: 160px;
+        margin-top: 60px;
+         height: 50vh;
          background-image: url(/imagenes/Banners/Banner.png);
          background-repeat: no-repeat;
          background-size: cover;
@@ -494,11 +562,8 @@ h2 {
          }
  
      .btn_banner{
-         margin-top: 17%;
-         margin-left: 17%;
-         font-size: 8px;
-         height: 20px;
-         width: 60px;
+        margin-bottom: 8vh; 
+        right: 60vh;
      }
 
     h1 {
@@ -509,18 +574,10 @@ h2 {
        margin-right: 20px;
     }
 
-    .contenido {
-        margin-left: 20px;
-    }
-
     .img_cont img{
         display: none;
     }
-
-    .contenedor{
-        width: 80%;
-        margin-left: 50px;
-    }
+    
     .contenido {
         margin-top: 20px;
         margin-left: 0;
@@ -556,28 +613,34 @@ h2 {
     }
 
     .contenedor{
-        width: 80%;
+        max-width: 80%;
         margin-left: 120px;
+        margin-left: 30%;
     }
 
     .foot {
-        height: 150px;
+        height: 200px;
     }
 
     .foot div{
        width: 90%;
-       margin-left: 30px;   
+       margin-left: 30px;  
     }
 
     .foot p{
-        margin-left: 180px;   
+        margin-left: 38%;  
      }
 
 
 }
 
+@media screen and (max-width: 993px){
+    .btn_banner{
+        right: 40vh;
+    }
+}
 
-@media screen and (max-width: 607px) {
+@media screen and (max-width: 685px) {
 
     .logo {
        height: 80px;
@@ -585,7 +648,8 @@ h2 {
     }
 
     #home div{
-        height: 150px;
+        margin-top: 70px;
+        height: 180px;
         background-image: url(/imagenes/Banners/Banner.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -594,11 +658,8 @@ h2 {
         }
 
     .btn_banner{
-        margin-top: 105px;
-        margin-left: 90px;
-        font-size: 8px;
-        height: 20px;
-        width: 60px;
+        margin-bottom: 30px; 
+        right: 170px;
     }
 
     .img_nosotros{

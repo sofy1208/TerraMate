@@ -15,19 +15,16 @@
 <body>
 
     <!--NAVBAR-->
-
+<header>
     <nav class="navbar">
-
-        <div class="logo">
-            <a href="#home"><img src="/imagenes/Logo.png" alt="logo empresa"></a>
-        </div>
-
+     
+            <a class="logo" href="#home"><img src="/imagenes/Logo.png" alt="logo empresa"></a>
 
         <!--MENU HAMBURGUESA-->
               
                <input type="checkbox" id="toggle" class="check">
                <label for="toggle" class="hamb-men">
-                <i><img src="/list.svg" alt=""></i>
+                <i><img src="/bars-solid.svg" alt=""></i>
                </label>
                 
                <div class="menu">
@@ -36,14 +33,30 @@
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="/Ingreso.html">Ingresar</a></li>
+                <li><i><a href=""><img src="/cart-shopping-solid.svg" alt="carrito"></a></i></li>
             </ul>
             </div>
-        
-    </nav>
+            
+            <label for="togg" class="cart">
+             <i><img src="/cart-shopping-solid.svg" alt=""></i>
+            </label> 
 
+          <input type="checkbox" id="togg" class="chck">
+
+        <div class="cart-disp">
+            <h2>Mi Carrito</h2>
+            <div>
+                <p>Total</p>
+                <span>$0</span>
+            </div>
+
+            <button class="btn_cart">Comprar</button>
+        </div>
+    </nav>
+</header>
     <!--HOME-->
 
-
+<main>
     <section id="home">
 
         <div>
@@ -359,7 +372,7 @@
     <section id="contacto">
 
         <h1>Contacto</h1>
-         
+   
         <div class = "contenedor">
         <div class="formu">
         <form method="post" action="">
@@ -388,7 +401,7 @@
              </div>
 
     </section>
-
+</main>
     <!--FOOTER-->
 
     <footer class="foot">
