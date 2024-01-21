@@ -7,7 +7,6 @@
     <title>TerraMate</title>
     <link rel="shortcut icon" href="/imagenes/Logo.png" type="image/x-icon">
 
-
     <link rel="stylesheet" href="index.css">
    
 </head>
@@ -22,35 +21,42 @@
 
         <!--MENU HAMBURGUESA-->
               
-               <input type="checkbox" id="toggle" class="check">
-               <label for="toggle" class="hamb-men">
+               <div class="hamb-men">
                 <i><img src="/bars-solid.svg" alt=""></i>
-               </label>
+               </div>
                 
                <div class="menu">
                 <ul>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="/Ingreso.html">Ingresar</a></li>
-                <li><i><a href=""><img src="/cart-shopping-solid.svg" alt="carrito"></a></i></li>
+                <li class="navbar-link"><a href="#productos">Productos</a></li>
+                <li class="navbar-link"><a href="#nosotros">Nosotros</a></li>
+                <li class="navbar-link"><a href="#contacto">Contacto</a></li>
+                <li class="navbar-link"><a href="/Ingreso.html">Ingresar</a></li>
             </ul>
             </div>
             
-            <label for="togg" class="cart">
-             <i><img src="/cart-shopping-solid.svg" alt=""></i>
-            </label> 
+            <div class="cart_icon">
+             <i><img src="/cart-shopping-solid.svg" alt="">
+             <div class="cart-bubble">0</div></i>
+            </div>
 
-          <input type="checkbox" id="togg" class="chck">
 
-        <div class="cart-disp">
+        <div class="cart">
             <h2>Mi Carrito</h2>
-            <div>
+
+            <div class="cart-container">
+
+
+            </div>
+
+            <span class="divider"></span>
+
+            <div class="cart_item">
                 <p>Total</p>
-                <span>$0</span>
+                <span class="total">$0</span>
             </div>
 
             <button class="btn_cart">Comprar</button>
+            <button class="btn-delete">Vaciar carrito</button>
         </div>
     </nav>
 </header>
@@ -60,7 +66,7 @@
     <section id="home">
 
         <div>
-            <a href="#productos"><button class="btn_banner" type="button">Ver más</button></a>
+          
         </div>
         
     </section>
@@ -93,276 +99,22 @@
          
         <h1>Productos</h1>
 
-        <!--VASOS-->
+        <div class="filter">
+            <button class="category active">Ver Todo</button>
+            <button class="category" data-category="Vasos">Vasos</button>
+            <button class="category" data-category="Botellas">Botellas</button>
+            <button class="category" data-category="Mochilas">Mochilas</button>
+            <button class="category" data-category="Termos">Termos</button>
+            <button class="category" data-category="Mates">Mates</button>
+
+        </div>
             
         <div class="container">
 
-            <h3>Vasos</h3>
-
-            <div class="producto">
-                <article class="conten">
-                    <div class="foto">
-                        <img src="/imagenes/Productos/TDA/Vasos/2.jpg" alt="foto vaso waterdog">
-                    </div>
-                    <div class="descr">
-                        <h4>Vaso Camping Waterdog</h4>
-                        <h6>$11399</h6>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-
-                    <article class="conten">
-                        <div class="foto">
-                            <img src="/imagenes/Productos/TDA/Vasos/14 (1).jpg" alt="foto vaso mug">
-                        </div>
-                        <div class="descr">
-                            <h4>Vaso Mug</h4>
-                            <h6>$5399</h6>
-                            <button>Comprar</button>
-                        </div>
-                    </article>
-
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/TDA/Vasos/Mesa de trabajo 21.jpg" alt="foto vaso coffe">
-                            </div>
-                            <div class="descr">
-                                <h4>Vaso Coffe</h4>
-                                <h6>$4899</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-
-                        
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/TDA/Vasos/Vaso_Termico_1.jpg" alt="foto vaso work">
-                            </div>
-                            <div class="descr">
-                                <h4>Vaso Work</h4>
-                                <h6>$6899</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-            </div>
+    
         </div>
 
-        <!--BOTELLAS-->
-
-        <div class="container2">
-
-            <h3>Botellas</h3>
-
-            <div class="producto">
-                <article class="conten">
-                    <div class="foto">
-                        <img src="/imagenes/Productos/TDA/botellas/Baby/Baby celeste.png" alt="foto botella baby">
-                    </div>
-                    <div class="descr">
-                        <h4>Botella Baby 350ml</h4>
-                        <h6>$5399</h6>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-
-                    <article class="conten">
-                        <div class="foto">
-                            <img src="/imagenes/Productos/TDA/botellas/Inova/Grupo 2.png" alt="foto botella inova">
-                        </div>
-                        <div class="descr">
-                            <h4>Botella Inova 1L</h4>
-                            <h6>$12399</h6>
-                            <button>Comprar</button>
-                        </div>
-                    </article>
-
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/TDA/botellas/Munich/Portada verde2.jpg" alt="foto botella munich">
-                            </div>
-                            <div class="descr">
-                                <h4>Botella Munich 500ml</h4>
-                                <h6>$7499</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-
-                        
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/TDA/botellas/ROLAN 750/Botella_Rolan_750ml_1.jpg" alt="foto botella rolan">
-                            </div>
-                            <div class="descr">
-                                <h4>Botella Rolan 750ml</h4>
-                                <h6>$8899</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-            </div>
-        </div>
-
-        <!--MOCHILAS-->
-
-        <div class="container3">
-
-            <h3>Mochilas</h3>
-
-            <div class="producto">
-                <article class="conten">
-                    <div class="foto">
-                        <img src="/imagenes/Productos/MARROQUINERÍA/MATERA TERRA 2.jpg" alt="foto matera eco">
-                    </div>
-                    <div class="descr">
-                        <h4>Matera Eco</h4>
-                        <h6>$11899</h6>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-
-                    <article class="conten">
-                        <div class="foto">
-                            <img src="/imagenes/Productos/MARROQUINERÍA/MOCHILA KOTE 4.jpg" alt="foto mochila matera">
-                        </div>
-                        <div class="descr">
-                            <h4>Mochila Matera Notebook</h4>
-                            <h6>$14399</h6>
-                            <button>Comprar</button>
-                        </div>
-                    </article>
-
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/MARROQUINERÍA/TOTE CAMILLE 2.jpg" alt="foto cartera camille">
-                            </div>
-                            <div class="descr">
-                                <h4>Cartera Camille</h4>
-                                <h6>$10699</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-
-                        
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/MARROQUINERÍA/TOTE NINA MILITAR 7.jpg" alt="foto cartera nina">
-                            </div>
-                            <div class="descr">
-                                <h4>Cartetra Nina</h4>
-                                <h6>$10899</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-            </div>
-        </div>
-
-        <!--TERMOS-->
-
-        <div class="container4">
-
-            <h3>Termos</h3>
-
-            <div class="producto">
-                <article class="conten">
-                    <div class="foto">
-                        <img src="/imagenes/Productos/TDA/Termos/Bala/Termo_Bala_Acero_Estuche_Tapon_12.jpg" alt="foto termo bala">
-                    </div>
-                    <div class="descr">
-                        <h4>Termo Bala 1L</h4>
-                        <h6>$8299</h6>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-
-                    <article class="conten">
-                        <div class="foto">
-                            <img src="/imagenes/Productos/Madu/termo verde.png" alt="foto termo inova">
-                        </div>
-                        <div class="descr">
-                            <h4>Termo Inova 1L</h4>
-                            <h6>$21399</h6>
-                            <button>Comprar</button>
-                        </div>
-                    </article>
-
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/TDA/Termos/Media manija/8.jpg" alt="foto termo media manija">
-                            </div>
-                            <div class="descr">
-                                <h4>Termo Media Manija 1L</h4>
-                                <h6>$9899</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-
-                        
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/Madu/termo cuero.jpg" alt="foto termo eco cuero">
-                            </div>
-                            <div class="descr">
-                                <h4>Termo Bala Eco Cuero 1L</h4>
-                                <h6>$11899</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-            </div>
-        </div>
-
-
-        <!--MATES-->
-
-        <div class="container5">
-
-            <h3>Mates</h3>
-
-            <div class="producto">
-                <article class="conten">
-                    <div class="foto">
-                        <img src="/imagenes/Productos/TDA/Mate/Copa_1.jpg" alt="foto mate copa">
-                    </div>
-                    <div class="descr">
-                        <h4>Mate Termico Copa</h4>
-                        <h6>$4399</h6>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-
-                    <article class="conten">
-                        <div class="foto">
-                            <img src="/imagenes/Productos/TDA/Mate/Copa_10.jpg" alt="foto mate viajero">
-                        </div>
-                        <div class="descr">
-                            <h4>Mate Viajero Termico</h4>
-                            <h6>$3999</h6>
-                            <button>Comprar</button>
-                        </div>
-                    </article>
-
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/TDA/Mate/Mate_Camionero_Calabaza_Uruguaya_Imnportada_2.jpg" alt="foto mate calabaza">
-                            </div>
-                            <div class="descr">
-                                <h4>Mate Camionero Calabaza</h4>
-                                <h6>$7599</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-
-                        
-                        <article class="conten">
-                            <div class="foto">
-                                <img src="/imagenes/Productos/TDA/Mate/Mate_Pampa_Caja_1.jpg" alt="foto mate pampa">
-                            </div>
-                            <div class="descr">
-                                <h4>Mate Pampa</h4>
-                                <h6>$7899</h6>
-                                <button>Comprar</button>
-                            </div>
-                        </article>
-            </div>
-        </div>
+       <button class="btn_prod">Ver más</button>
 
     </section>
     
@@ -415,5 +167,7 @@
 
     </footer>
 
+    <script src="data.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
