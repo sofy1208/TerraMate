@@ -172,6 +172,80 @@ transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     font-size: 18px;
   }
 
+  .divider {
+    background-color: var(--sec);
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+  }
+
+  .cart-prod {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--sec);
+    padding: 20px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+  }
+  
+  .cart-prod img {
+    height: 85px;
+    width: 85px;
+  }
+  
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 110px;
+  }
+  
+  .item-title {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 20pxpx;
+  }
+  
+  .item-price {
+    color: var(--primary);
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .item-handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .quantity-handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: var(--primary);
+    font-weight: 400;
+  }
+  
+  .item-quantity {
+    color: var(--primary);
+  }
+  
+  .up {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+  }
+  
+  .down {
+    background-color: var(--sec);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+ }  
+
 .btn_cart, .btn-delete{
     height: 30px;
     width: 120px;
@@ -194,6 +268,19 @@ transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
     transform: translate(0%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
   } 
+
+  .disabled {
+    background-color: var(--sec);
+    color: var(--primary);
+    cursor: not-allowed;
+    border: none;
+  }
+  .disabled:hover {
+    background-color: var(--sec);
+    color:var(--primary);
+    cursor: not-allowed;
+    border: none;
+  }
 
 /*Estilo Home*/
 
@@ -531,6 +618,11 @@ h2 {
     margin-left:40%;
     margin-top: 30px;
 }
+
+.active-modal {
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+  }
 
 /*---------------------------------------------------*/
 
