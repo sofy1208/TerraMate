@@ -143,7 +143,7 @@
         </label>
             <label for="consulta">Consulta</label> <textarea name="consulta" id="consulta" cols="30" rows="10"></textarea>
        
-        <button type="submit">Enviar</button>
+        <button class="form-btn" type="submit">Enviar</button>
     </form>
          </div>
         </div>
@@ -159,16 +159,17 @@
     <footer class="foot">
         
         <div class="suscribe">
-        <input type="text" name="suscribe" placeholder="Ingrese un mail" size="30">
-        <button type="submit" value="suscripto">Suscribite</button>
+        <input type="email" name="suscribe" placeholder="Ingrese un mail" size="30" required>
+        <button class="suscribe-btn" type="submit" value="suscripto">Suscribite</button>
         </div>
 
         <p>#NuestraEsenciaNatural</p>
 
     </footer>
-    
+
     <div class="add-modal"></div>
     <script src="data.js"></script>
     <script src="index.js"></script>
+    <script src="form.js"></script>
 </body>
 </html>

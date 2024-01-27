@@ -146,6 +146,14 @@ h2 {
     font-family: var(--font-text);
 }
 
+.succes {
+    border: 1px solid green;
+}
+
+.error {
+    border: 1px solid red;
+}
+
 .foot p{
     font-family: var(--font-title);
     color: var(--sec);
