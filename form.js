@@ -1,27 +1,49 @@
-const form = document.querySelector(".formu");
-const inputs = document.querySelectorALL(".formu input");
-const suscribeBtn = document.querySelector(".suscribe-btn");
+    //Formulario de contacto
 
-const expresiones = {
-	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
-	password: /^.{8,12}$/, 
-	mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	phone: /^\d{7,14}$/ 
-}
+document.addEventListener('DOMContentLoaded', function () {
 
+    const form = document.getElementById('formContacto');
+    const ingreso = document.getElementById('ingreso');
 
-const empty = (value) => (value = "" ? false : true);
+    form.addEventListener('submit', function (event) {
+        if (validateForm()) {
+            alert('Formulario enviado correctamente');
+        } else {
+            event.preventDefault();
+        }
+    });
 
-const long = (length, min, max) => (length<min || length>max ? false: true);
+    function validateForm() {
+      
+        const name = document.getElementById('name').value;
+        const mail = document.getElementById('mail').value;
+        const cel = document.getElementById('cel').value;
+        const consulta = document.getElementById('consulta').value;
 
-const error = (input, msg) => {
-    const formField = input.parentElement;
-    formField.classList.remove("succes");
-    formField.classList.add("error");
-    const error = formField.querySelector("");
-    error.textContent = msg;
-};
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneValid = /^\d{10}$/;
 
-const succes = (input) => {
+        if (name.trim() === '') {
+            alert('Por favor, ingrese su nombre');
+            return false;
+        }
 
-}
+        if (consulta.trim() === '') {
+            alert('Por favor, ingrese su mensaje');
+            return false;
+        }
+
+        if (!emailValid.test(mail)) {
+            alert('Por favor, ingrese un correo electrónico válido');
+            return false;
+        }
+
+        if (!phoneValid.test(cel)) {
+            alert('Por favor, ingrese un número de teléfono válido');
+            return false;
+        }
+
+        return true;
+    }
+    
+});

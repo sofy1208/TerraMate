@@ -20,6 +20,7 @@
 </nav>
 
 <!--REGISTRO-->
+<body>
 
 <section id="registro">
 
@@ -30,7 +31,7 @@
 
 <div class = "contenedor">
     <div class="formu">
-    <form action="post">
+    <form id="formRegistrarse" method="get">
 
         <h2>Registrarse</h2>
 
@@ -51,15 +52,15 @@
 <footer class="foot">
         
     <div class="suscribe">
-    <input type="text" name="suscribe" placeholder="Ingrese un mail" size="30">
-    <button type="submit" value="suscripto">Suscribite</button>
+        <form id="subscribeForm">
+     <input class="susc-input" type="email" name="suscribe" placeholder="Ingrese un mail" size="30" required>
+     <button class="suscribe-btn" type="submit" value="suscripto">Suscribite</button>
+     </form>
     </div>
 
     <p>#NuestraEsenciaNatural</p>
 
 </footer>
 
-<body>
-    
 </body>
 </html>
